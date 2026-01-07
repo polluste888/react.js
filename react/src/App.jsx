@@ -7,13 +7,13 @@ function App() {
     const expenses = [
         {
             date: new Date(2023, 0, 10),
-            title:'New book',
-            price: 30.99
+            title:'BMW M3 G80',
+            price: 69999.99
         },
         {
             date: new Date(2023, 0, 5),
-            title:'Icecream',
-            price: 3.99
+            title:'Ayton game-worn jersey',
+            price: 250.00
         }
     ]
 
