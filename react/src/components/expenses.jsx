@@ -8,10 +8,10 @@ const Expenses = (props) => {
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
-    console.log('Expenses.js sai kätte aasta:', selectedYear);
+    console.log('Filtreerimine: valitud aasta', selectedYear);
   };
 
- 
+  
   const filteredExpenses = props.items.filter((expense) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
@@ -23,7 +23,7 @@ const Expenses = (props) => {
         onChangeFilter={filterChangeHandler} 
       />
       
-      
+     
       {filteredExpenses.length === 0 ? (
         <p style={{color: 'white', textAlign: 'center'}}>Sellel aastal kulusid ei leitud.</p>
       ) : (

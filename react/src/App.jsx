@@ -12,9 +12,21 @@ const INITIAL_EXPENSES = [
   },
   {
     id: 'e2',
-    date: new Date(2023, 0, 5),
+    date: new Date(2024, 5, 15),
     title: 'Ayton game-worn jersey',
     price: 250.00
+  },
+  {
+    id: 'e3',
+    date: new Date(2025, 1, 20),
+    title: 'Uus arvuti',
+    price: 1200.00
+  },
+  {
+    id: 'e4',
+    date: new Date(2024, 8, 5),
+    title: 'Kindlustus',
+    price: 450.00
   }
 ];
 
@@ -29,10 +41,7 @@ function App() {
 
   return (
     <div className="App">
-     
       <NewExpense onAddExpense={addExpenseHandler} />
-      
-    
       <Expenses items={expenses} />
     </div>
   );
