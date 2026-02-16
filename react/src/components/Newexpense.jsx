@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import ExpenseForm from './Expenseform'; 
-import './Newexpense.css';
+import React, { useState } from "react";
+import ExpenseForm from "./ExpenseForm";
+import "./Newexpense.css";
 
 const NewExpense = (props) => {
-  // Vihje 1: Olek vormi näitamise haldamiseks
   const [isEditing, setIsEditing] = useState(false);
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
@@ -11,14 +10,12 @@ const NewExpense = (props) => {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    
+
     props.onAddExpense(expenseData);
-    
-    // Vihje 4: Pane vorm kinni pärast andmete edukat saatmist
+
     setIsEditing(false);
   };
 
-  // Vihje 2: Funktsioonid vormi avamiseks ja sulgemiseks
   const startEditingHandler = () => {
     setIsEditing(true);
   };
@@ -28,17 +25,15 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className='new-expense'>
-      
+    <div className="new-expense">
       {!isEditing && (
         <button onClick={startEditingHandler}>Add New Expense</button>
       )}
 
-     
       {isEditing && (
-        <ExpenseForm 
-          onSaveExpenseData={saveExpenseDataHandler} 
-          onCancel={stopEditingHandler} 
+        <ExpenseForm
+          onSaveExpenseData={saveExpenseDataHandler}
+          onCancel={stopEditingHandler}
         />
       )}
     </div>

@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.light {
+  background-color: #f7f7f7;
+  color: #222;
+  transition: all 0.3s ease;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: #222222;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  min-height: 100vh;
+}
+
+.dark header {
+  background-color: #1a1a1a !important;
+}
+
+.dark .card {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+}
